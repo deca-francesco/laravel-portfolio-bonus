@@ -7,7 +7,7 @@ export default function AppHeader() {
         <>
             <header className="bg-dark">
                 <div className="container h-100 d-flex align-items-center">
-                    <Link to={"/projects"} ><img src="./src/assets/logo-no-background.png" alt="logo" width={150} /></Link>
+                    <Link to={"/projects"} ><img src="/src/assets/logo-no-background.png" alt="logo" width={150} /></Link>
                 </div>
             </header>
         </>
