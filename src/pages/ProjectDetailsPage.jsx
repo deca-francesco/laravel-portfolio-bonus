@@ -22,7 +22,7 @@ export default function ProjectDetailsPage() {
 
     return (
         <>
-            <div className="container">
+            <div className="container mb-5">
                 <h1 className="d-flex justify-content-between align-items-center">
                     {project.name}
                     <Link to={"/projects"} className="btn btn-secondary" >Indietro</Link>
