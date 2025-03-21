@@ -6,6 +6,7 @@ export default function ProjectDetailsPage() {
 
     const { id } = useParams()
     const api_server = import.meta.env.VITE_API_SERVER
+    const api_server_storage = import.meta.env.VITE_API_SERVER_STORAGE
     const [project, setProject] = useState({})
 
     function fetchProjectDetails(url = `${api_server}/${id}`) {
@@ -34,7 +35,14 @@ export default function ProjectDetailsPage() {
                 <p><strong>Data inizio: </strong>{project.started}</p>
                 <p><strong>Data fine: </strong>{project.finished ? project.finished : "In corso"}</p>
                 <p><strong>Descrizione: </strong>{project.description}</p>
-            </div >
+                {project.image ? (
+                    <div>
+                        <p>Anteprima: </p>
+                        {/* costruzione url assoluto dal relativo delle API */}
+                        <img src={`${api_server_storage}/${project.image}`} className="img-fluid" alt="copertina" />
+                    </div>
+                ) : ""}
+            </div>
         </>
     )
 }
