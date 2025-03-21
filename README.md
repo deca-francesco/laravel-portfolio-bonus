@@ -1,0 +1,1 @@
+## Questa è una piccola applicazione per poter usare le API del progetto in laravel
