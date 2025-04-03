@@ -23,7 +23,7 @@ export default function ProjectsPage() {
         <>
             <div className="container">
                 <h1>Tutti i progetti</h1>
-                <div className="row row-cols-1 g-5 mt-1 mb-5">
+                <div className="row row-cols-1 row-cols-xl-2 g-5 mt-1 mb-5">
                     {projects?.map(project => <ProjectCard key={project.id} project={project} />)}
                 </div>
             </div>
